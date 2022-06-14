@@ -49,6 +49,6 @@
         
     if($query)
     {
-        echo "<p>Product Type Table Query Successful</p>";
+        echo "<p>Product Table Query Successful</p>";
     }
 ?>
