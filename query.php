@@ -23,12 +23,26 @@
     //     Message varchar(1000)
     // )";
 
-    $create = "CREATE TABLE producttype
+    // $create = "CREATE TABLE producttype
+    // (
+    //     ProductTypeID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    //     ProductTypeName varchar(30),
+    //     ProductCategory varchar(30),
+    //     Company varchar(30)
+    // )";
+
+    $create = "CREATE TABLE product
     (
-        ProductTypeID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        ProductTypeName varchar(30),
-        ProductCategory varchar(30),
-        Company varchar(30)
+        ProductID int not null primary key AUTO_INCREMENT,
+        ProductName varchar(30),
+        Price varchar(30),
+        Year varchar(30),
+        Quantity int,
+        ProductImage1 text,
+        ProductImage2 text,
+        Description varchar(100),
+        ProductTypeID int,
+        FOREIGN KEY (ProductTypeID) references producttype(ProductTypeID)
     )";
 
     $query = mysqli_query($connect, $create);
