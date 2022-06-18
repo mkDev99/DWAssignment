@@ -51,7 +51,7 @@
             if ($query)
             {
                 echo "<script>alert('Product Registration Successful')</script>";
-                echo "<script>window.location='ProductEntry.php'</script>";
+                echo "<script>window.location='productregistration.php'</script>";
             }
             else
             {
@@ -68,7 +68,7 @@
     <title>Product Entry Form</title>
 </head>
 <body>
-    <form method="POST" action="ProductEntry.php" enctype="multipart/form-data">
+    <form method="POST" action="productregistration.php" enctype="multipart/form-data">
         <fieldset>
             <legend>Product Registration</legend>
             <table>

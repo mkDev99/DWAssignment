@@ -3,7 +3,7 @@
 
     if(isset($_POST['btnregister']))
     {
-        $producttypename = $_POST['txtproducttypename'];
+        $producttypename = $_POST['optproducttype'];
         $category = $_POST['txtcategory'];
         $company = $_POST['txtcompany'];
 
@@ -46,15 +46,19 @@
                 <td colspan="2" align="center"><h2>Product Type Registration</h2></td>
             </tr>
             <tr>
-                <td>Product Type Name</td>
-                <td>
-                    <input type="text" name="txtproducttypename" required placeholder="Enter Product Type Name">
-                </td>
-            </tr>
-            <tr>
                 <td>Category</td>
                 <td>
                     <input type="text" name="txtcategory" required placeholder="Enter Category">
+                </td>
+            </tr>
+            <tr>
+                <td>Product Type Name</td>
+                <td>
+                    <select name="optproducttype" id="">
+                        <option value="">Choose Product Type</option>
+                        <option value="Used">Used</option>
+                        <option value="New">New</option>
+                    </select>
                 </td>
             </tr>
             <tr>
