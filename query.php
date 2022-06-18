@@ -27,7 +27,6 @@
     // (
     //     ProductTypeID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     //     ProductTypeName varchar(30),
-    //     ProductCategory varchar(30),
     //     Company varchar(30)
     // )";
 
@@ -42,13 +41,15 @@
         ProductImage2 text,
         Description varchar(100),
         ProductTypeID int,
-        FOREIGN KEY (ProductTypeID) references producttype(ProductTypeID)
+        FOREIGN KEY (ProductTypeID) references producttype(ProductTypeID),
+        ProductCondition varchar(30)
     )";
 
     $query = mysqli_query($connect, $create);
         
     if($query)
     {
-        echo "<p>Product Table Query Successful</p>";
+        echo "<p>Product Registration Table Query Successful</p>";
     }
+
 ?>

@@ -3,8 +3,7 @@
 
     if(isset($_POST['btnregister']))
     {
-        $producttypename = $_POST['optproducttype'];
-        $category = $_POST['txtcategory'];
+        $producttypename = $_POST['txtproducttype'];
         $company = $_POST['txtcompany'];
 
         $select = "SELECT * FROM producttype where ProductTypeName = '$producttypename'";
@@ -18,8 +17,8 @@
         }
         else
         {
-            $insert = "INSERT INTO producttype(ProductTypeName, ProductCategory, Company)
-            values('$producttypename', '$category', '$company')";
+            $insert = "INSERT INTO producttype(ProductTypeName, Company)
+            values('$producttypename', '$company')";
 
             $query = mysqli_query($connect, $insert);
 
@@ -46,19 +45,9 @@
                 <td colspan="2" align="center"><h2>Product Type Registration</h2></td>
             </tr>
             <tr>
-                <td>Category</td>
+                <td>Product Type</td>
                 <td>
-                    <input type="text" name="txtcategory" required placeholder="Enter Category">
-                </td>
-            </tr>
-            <tr>
-                <td>Product Type Name</td>
-                <td>
-                    <select name="optproducttype" id="">
-                        <option value="">Choose Product Type</option>
-                        <option value="Used">Used</option>
-                        <option value="New">New</option>
-                    </select>
+                    <input type="text" name="txtproducttype" required placeholder="Enter Product Type">
                 </td>
             </tr>
             <tr>

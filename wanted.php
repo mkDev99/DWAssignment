@@ -1,101 +1,281 @@
 <?php
-    include('connect.php');
+session_start();
+include('Connect.php');
+
+
+
 ?>
 
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
 </head>
 <body>
-    <form action="wanted.php" method="POST">
-        <input type="text" name="txtSearch" placeholder="Search Here">
-        <a href="wanted.php"><button name="btnSearchs"></button></a>
-    </form>
+<form action="wanted.php" method="POST">
+<h1>Search Here Second Hand Product</h1>
+<input type="text" name="txtSearch" placeholder="Search Here ..."/>
+<button name="btnSearch"> Search</button>
+</form>
 
-    <?php
-        if (isset($_POST['btnSearch']))
-        {
-            $vname = $_POST['txtSearch'];
-            $query = "SELECT * FROM product p, producttype pt
-                      WHERE p.ProductTypeID = pt.ProductTypeID
-                      AND pt.ProductType = 'secondhand'
-                      AND p.ProductName LIKE '%$vname%'";
-            
-            $result = mysqli_query($connect, $query);
-            $count = mysqli_num_rows($result);
 
-            if($count > 0)
-            {
-                for ($i = 0; $i < $count; $i += 5)
-                {
-                    $query1 = "SELECT * FROM product p, producttype pt
-                               WHERE p.ProductTypeID = pt.ProductTypeID
-                               AND pt.ProductType = 'secondhand'
-                               AND ProductName LIKE '%$vname%' LIMIT $i,5";
-                    $result1 = mysqli_query($connect, $query1);
-                    $count1 = mysqli_num_rows($result1);
-                    ?>
 
-                    <h3>Second Hand Equipment</h3>
+<?php
+if(isset($_POST['btnSearch']))
+{
+$second=$_POST['txtSearch'];
+$query="SELECT * FROM product
+WHERE ProductCondition='Used'
+AND ProductName LIKE '%$second%'";
+$result=mysqli_query($connect,$query);
+$count=mysqli_num_rows($result);
 
-                    <div>
-                        <?php
-                            for ($j = 0; $j < $count1; $j++)
-                            {
-                                $data = mysqli_fetch_array($result1);
-                                $productID = $data['ProductID'];
-                                $productID = $data['ProductID'];
-                                $productID = $data['ProductID'];
-                                $productID = $data['ProductID'];
-                        ?>
 
-                        <div>
-                            <div>
-                                <div>
-                                    <div>
-                                        <div>
-                                            <a href="sdetail.php?PID=<?php echo $productID ?>&qty=1">
-                                            <img src="<? $data['ProductImage'] ?>" alt=""></a>
-                                        </div>
-                                        <div>Sale Products</div>
-                                    </div>
-                                    <div>
-                                        <h3>
-                                            <a href="sdetail.php?PID=<?php echo $productID ?>$qty=1">
-                                            <?php echo $productname ?></a>
-                                        </h3>
 
-                                        <div></div>
-                                        <div class="decription"><?php echo $data['Description'] ?></div>
-                                        <div class="price"> $ <?php echo $data['Price'] ?></div>
-                                    </div>
+if($count>0)
+{
+for ($i=0; $i < $count; $i+=5)
+{
+$query1="SELECT * FROM product
+WHERE ProductCondition='Used'
+AND ProductName LIKE '%$second%' LIMIT $i,5";
+$result1=mysqli_query($connect,$query1);
+$count1=mysqli_num_rows($result1);
 
-                                    <div>
-                                        <div>
-                                            <ul>
-                                                <li>
-                                                    <button><i><a href="ProductCartList.php?PID=<?php echo $productID ?> &qty=1">Add to Cart</a></i></button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            }
-                        ?>
-                    </div>
-                <?php
-                }
-                echo "</div>";
-                
-            }
-        }
-        }
-    ?>
+
+
+?>
+
+
+
+
+<h2>Seond Hand Products</h2>
+<div>
+
+<?php
+
+
+
+for ($j=0; $j < $count1; $j++)
+
+
+
+{
+$data=mysqli_fetch_array($result1);
+$ProductID=$data['ProductID'];
+
+
+
+$name=$data['ProductName'];
+$price=$data['Price'];
+$des=$data['Description'];
+$image=$data['ProductImage1'];
+
+
+
+
+?>
+
+
+
+<div>
+
+<a href="seconddetail.php?PID=<?php echo $productcode ?>&qty=1">
+<img src="<?php echo $image ?>" width='200px' height='200px'>
+
+
+
+</a>
+</div>
+
+
+
+<div><span>Sale Products</span></div>
+
+
+
+
+<div>
+
+<h3>
+<a href="seconddetail.php?PID=<?php echo $productcode ?>&qty=1"> <?php echo $name?></a></h3>
+
+
+
+<div></div>
+<div></div>
+<div class="description"><?php echo $des ?></div>
+<div class="price"><?php echo $price ?></div>
+</div>
+
+
+
+<div>
+
+<div>
+
+<button><i><a href="ProductCartList.php?pid=<?php echo $productcode ?>&qty=1">Add To Cart</a></i></button>
+
+</div>
+</div>
+
+
+
+<?php
+
+
+
+}
+
+echo "</div>";
+
+
+
+}
+}
+
+
+
+
+else
+{
+echo "<h1><b>Search Record Not Found</b></h1>";
+}
+
+
+
+}
+
+
+
+else
+{
+$query="SELECT * from product WHERE ProductCondition='Used'
+ORDER BY ProductName";
+$result=mysqli_query($connect,$query);
+$count=mysqli_num_rows($result);
+
+
+
+if($count>0)
+{
+
+
+
+for ($i=0; $i <$count ; $i+=7)
+
+
+
+{
+$query1="SELECT * from product WHERE ProductCondition='Used'
+ORDER BY ProductName LIMIT $i,7";
+$result1=mysqli_query($connect,$query1);
+$count1=mysqli_num_rows($result1);
+
+
+
+?>
+<section>
+<h3>Second Hand Products</h3>
+<div>
+
+
+
+<?php
+
+
+
+
+for ($j=0; $j <$count1 ; $j++)
+{
+$data=mysqli_fetch_array($result1);
+$ProductID=$data['ProductID'];
+
+
+
+$name=$data['ProductName'];
+$price=$data['Price'];
+$des=$data['Description'];
+$image=$data['ProductImage1'];
+
+
+
+?>
+
+
+
+<div>
+
+
+
+
+<div>
+<div>
+<div>
+<div>
+
+<a href="seconddetail.php?PID=<?php echo $productcode ?>&qty=1"> <?php echo $name?>
+<img src="<?php echo $image ?>">
+</a>
+
+
+
+</div>
+
+
+
+<div><span>Sale</span></div>
+</div>
+
+
+
+<div>
+<h3>
+<a href="seconddetail.php?PID=<?php echo $productcode ?>&qty=1"> <?php echo $name?></a>
+</h3>
+<div class="description"><?php echo $des ?></div>
+<div class="price">$<?php echo $price ?></div>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+<?php
+}
+
+
+
+
+echo "</div> </section>";
+
+
+
+}
+
+
+
+
+
+}
+}
+?>
+
+
+
+
+
+
+
+
 </body>
 </html>

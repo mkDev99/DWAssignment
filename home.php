@@ -92,51 +92,40 @@
 							</a>
 						</li><!--/li-->
                         <li>
-                        <?php
-                            if(!isset($_SESSION['CustomerID']))
-                            {
-                                echo "<script> alert ('Please Log in') </script>";
-                            }
-                            else
-                            {
-                                $CustomerID = $_SESSION['CustomerID'];
-                                $insert = "SELECT * FROM customer WHERE CustomerID = '$CustomerID'";
-                                $query = mysqli_query($connect, $insert);
-                                $count = mysqli_num_rows($query);
-                                if($count > 0)
-                                {
-                                    $data = mysqli_fetch_array($query);
-                                    $count1 = $data['ViewCount'];
-                                    echo "View Count : " . $count1;
-                                }
-                            }
-                        ?>
+
                         </li>
 					</ul><!--/ul-->
 				</div><!--/.header-left -->
 				<div class="header-right pull-right">
 					<ul>
 						<li class="reg">
+							<?php
+								if(!isset($_SESSION['CustomerID']))
+								{
+									echo "<script> alert ('Please Log in') </script>";
+								}
+								else
+								{
+									$CustomerID = $_SESSION['CustomerID'];
+									$insert = "SELECT * FROM customer WHERE CustomerID = '$CustomerID'";
+									$query = mysqli_query($connect, $insert);
+									$count = mysqli_num_rows($query);
+									if($count > 0)
+									{
+										$data = mysqli_fetch_array($query);
+										$count1 = $data['ViewCount'];
+										echo "View Count : " . $count1;
+									}
+								}
+							?>
+
 							<a href="register.php" >
 								Register
 							</a>
-								/
-							<a href="login.php" >
-								Log in
-							</a>
-							
-                            <?php
-                                $CustomerID = $_SESSION['CustomerID'];
-                                $insert = "SELECT * FROM customer WHERE CustomerID = '$CustomerID'";
-                                $query = mysqli_query($connect, $insert);
-                                $count = mysqli_num_rows($query);
-                                if($count > 0)
-                                {
-                                    $data = mysqli_fetch_array($query);
-                                    $customername = $data['CustomerName'];
-                                    echo $customername;
-                                }
-                            ?>
+							||
+                            
+
+						
 							
 							<!-- <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 								<div class="modal-dialog modal-sm" role="document">
@@ -189,14 +178,20 @@
 						</li><!--/li -->
 						<li>
 							<div class="social-icon">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								</ul><!--/.ul -->
-							</div><!--/.social-icon -->
-						</li><!--/li -->
+								<?php
+									$CustomerID = $_SESSION['CustomerID'];
+									$insert = "SELECT * FROM customer WHERE CustomerID = '$CustomerID'";
+									$query = mysqli_query($connect, $insert);
+									$count = mysqli_num_rows($query);
+									if($count > 0)
+									{
+										$data = mysqli_fetch_array($query);
+										$customername = $data['CustomerName'];
+										echo $customername;
+									}
+								?>
+							</div>
+						</li>
 					</ul><!--/ul -->
 				</div><!--/.header-right -->
 			</div><!--/.container -->	
@@ -227,7 +222,7 @@
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
 								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="about.html">About</a></li>
+								<li><a href="wanted.php">Wanted</a></li>
 								<li><a href="service.html">Service</a></li>
 								<li><a href="project.html">Project</a></li>
 								<li><a href="team.html">Team</a></li>
@@ -273,9 +268,9 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="single-slide-item-content">
-											<h2>Consult Your <br> Business With Us</h2>
+											<h2>Start Your Home Gym Journey</h2>
 											<p>
-												We are the unique Consultancy Farm for your business solution, That is ready to take challenge and knockout your business problems. 
+												We are the unique Provider for Your Dream Home Gym. 
 											</p>
 											<button type="button" class="slide-btn">
 											get started
@@ -297,10 +292,10 @@
 									<div class="col-sm-12">
 										<div class="single-slide-item-content">
 											<h2>
-												Consult Your <br> Business
+												Build Your Own Gym
 											</h2>
 											<p>
-												We are the unique Consultancy Farm for your business solution, That is ready to take challenge and knockout your business problems.  
+												We Provide the Best Quality Products for Your Home Gym  
 											</p>
 											<button type="button"  class="slide-btn">
 												get started
@@ -330,126 +325,59 @@
 		</section><!-- /.header-slider-area-->
 		<!-- header-slider-area end -->
 		
-		<!--we-do start -->
-		<section  class="we-do">
-			<div class="container">
-				<div class="we-do-details">
-					<div class="section-header text-center">
-						<h2>what we do</h2>
-						<p>
-							Pallamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						</p>
-					</div><!--/.section-header-->
-					<div class="we-do-carousel">
-						<div class="row">
-							<div class="col-sm-4 col-xs-12">
-								<div class="single-we-do-box text-center">
-									<div class="we-do-description">
-										<div class="we-do-info">
-											<div class="we-do-img">
-												<img src="assets/images/home/consultency.png" alt="image of consultency" />
-											</div><!--/.we-do-img-->
-											<div class="we-do-topics">
-												<h2>
-													<a href="#">
-														Business Consultancy
-													</a>
-												</h2>
-											</div><!--/.we-do-topics-->
-										</div><!--/.we-do-info-->
-										<div class="we-do-comment">
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ul.
-											</p>
-										</div><!--/.we-do-comment-->
-									</div><!--/.we-do-description-->
-								</div><!--/.single-we-do-box-->
-							</div><!--/.col-->
-							<div class="col-sm-4 col-xs-12">
-								<div class="single-we-do-box text-center">
-									<div class="we-do-description">
-										<div class="we-do-info">
-											<div class="we-do-img">
-												<img src="assets/images/home/busisness_grow.png" alt="image of business" />
-											</div><!--/.we-do-img-->
-											<div class="we-do-topics">
-												<h2>
-													<a href="#">
-														help to grow Business
-													</a>
-												</h2>
-											</div><!--/.we-do-topics-->
-										</div><!--/.we-do-info-->
-										<div class="we-do-comment">
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ul.
-											</p>
-										</div><!--/.we-do-comment-->
-									</div><!--/.we-do-description-->
-								</div><!--/.single-we-do-box-->
-							</div><!--/.col-->
-							<div class="col-sm-4 col-xs-12">
-								<div class="single-we-do-box text-center">
-									<div class="we-do-description">
-										<div class="we-do-info">
-											<div class="we-do-img">
-												<img src="assets/images/home/support-logo.png" alt="image of support" />
-											</div><!--/.we-do-img-->
-											<div class="we-do-topics">
-												<h2>
-													<a href="#">
-														great support
-													</a>
-
-												</h2>
-											</div><!--/.we-do-topics-->
-										</div><!--/.we-do-info-->
-										<div class="we-do-comment">
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ul.
-											</p>
-										</div><!--/.we-do-comment-->
-									</div><!--/.we-do-description-->
-								</div><!--/.single-we-do-box-->
-							</div><!--/.col-->
-						</div><!--/.row-->
-					</div><!--/.we-do-carousel-->
-				</div><!--/.we-do-details-->
-			</div><!--/.container-->
-
-		</section><!--/.we-do-->
-		<!--we-do end-->
-
-		<!--about-us start -->
 		<section class="about-us">
 			<div class="container">
 				<div class="about-us-content">
-					<div class="row">
+				<div class="row">
 						<div class="col-sm-6">
 							<div class="single-about-us">
 								<div class="about-us-txt">
-									<h2>about us</h2>
+									<h2>Amazfit Treadmill</h2>
 									<p>
 										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
 									</p>
-									<div class="project-btn">
-										<a href="#"  class="project-view">learn more
-										</a>
-									</div><!--/.project-btn-->
+									
 								</div><!--/.about-us-txt-->
 							</div><!--/.single-about-us-->
 						</div><!--/.col-->
 						<div class="col-sm-6">
 							<div class="single-about-us">
 								<div class="about-us-img">
-									<img src="assets/images/about/about-part.jpg" alt="about images">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/Ja2ZTuKu7SE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								</div><!--/.about-us-img-->
 							</div><!--/.single-about-us-->
 						</div><!--/.col-->
 					</div><!--/.row-->
 				</div><!--/.about-us-content-->
 			</div><!--/.container-->
+		</section><!--/.about-us-->
+		<!--about-us end -->
 
+		<section class="about-us">
+			<div class="container">
+				<div class="about-us-content">
+				<div class="row">
+						<div class="col-sm-6">
+							<div class="single-about-us">
+								<div class="about-us-txt">
+									<h2>PowerBlock Dumbbells</h2>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+									</p>
+									
+								</div><!--/.about-us-txt-->
+							</div><!--/.single-about-us-->
+						</div><!--/.col-->
+						<div class="col-sm-6">
+							<div class="single-about-us">
+								<div class="about-us-img">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/0tEQtI7zjTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div><!--/.about-us-img-->
+							</div><!--/.single-about-us-->
+						</div><!--/.col-->
+					</div><!--/.row-->
+				</div><!--/.about-us-content-->
+			</div><!--/.container-->
 		</section><!--/.about-us-->
 		<!--about-us end -->
 

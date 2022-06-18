@@ -9,6 +9,7 @@
         $quantity = $_POST['numberquantity'];
         $description = $_POST['txtdescription'];
         $cboType = $_POST['cboType'];
+        $optCondition = $_POST['optCondition'];
 
         $image1 = $_FILES['productimage1']['name'];
         $folder = "images/";
@@ -38,13 +39,13 @@
         if($count > 0)
         {
             echo "<scritp>alert('Product Registration Unsuccessful')</script>";
-            echo "<script>window.location='ProductEntry.php'</script>";
+            echo "<script>window.location='productregistration.php'</script>";
             exit();
         }
         else
         {
-            $insert = "INSERT INTO product(ProductName, Price, Year, Quantity, ProductImage1, ProductImage2, Description, ProductTypeID)
-            values('$productname', '$price', '$year', '$quantity', '$filename1', '$filename2', '$description', '$cboType')";
+            $insert = "INSERT INTO product(ProductName, Price, Year, Quantity, ProductImage1, ProductImage2, Description, ProductTypeID, ProductCondition)
+            values('$productname', '$price', '$year', '$quantity', '$filename1', '$filename2', '$description', '$cboType', '$optCondition')";
 
             $query = mysqli_query($connect, $insert);
 
@@ -128,11 +129,21 @@
                                     $row = mysqli_fetch_array($ret);
                                     $producttypeid = $row['ProductTypeID'];
                                     $producttypename = $row['ProductTypeName'];
-                                    $productcategory = $row['ProductCategory'];
+                                    $company = $row['Company'];
 
-                                    echo "<option value='$producttypeid'>$producttypeid - $producttypename - $productcategory</option>";
+                                    echo "<option value='$producttypeid'>$producttypeid - $producttypename - $company</option>";
                                 }
                             ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Product Condition</td>
+                    <td>
+                        <select name="optCondition">
+                            <option value="">Please Choose Product Condition</option>
+                            <option value="New">New</option>
+                            <option value="Used">Used</option>
                         </select>
                     </td>
                 </tr>
