@@ -30,11 +30,11 @@
                 if($counterror == 1)
                 {
                     $_SESSION['loginError'] = 2;
-                    echo "<script>window.alert('Login failed')</script>";
+                    echo "<script>window.alert('Please Try Again. Login Attempt : 2')</script>";
                 }
                 if($counterror == 2)
                 {
-                    echo "<script>window.alert('Login failed')</script>";
+                    echo "<script>window.alert('Login failed. Please Wait 10 minutes.')</script>";
                     echo "<script>window.location='LoginTimer.php'</script>";
                 }
             }
