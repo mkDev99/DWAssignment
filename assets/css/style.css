@@ -358,12 +358,14 @@ html,body{
 	text-shadow: #4c4c5c;
 }
 .single-slide-item p {
-	color:#fefefe;
+	color:#000000;
+	font-weight: 500;
 	font-size:24px;
 	max-width:805px;
 	font-family: 'Lato', sans-serif;
-    line-height: 1.5;
+    line-height: 1.8;
 	margin-bottom:51px;
+	text-shadow: #4c4c5c;
 }
 .single-slide-item button.slide-btn,
 .single-slide-item  button:active .slide-btn ,
@@ -395,17 +397,17 @@ html,body{
 	 border: 1px solid #fff;
 }
 .single-slide-item.slide-1 {
-	background-image:url(../../assets/images/banner/banner1.jpg);
+	background-image:url(../../assets/images/banner/banner1.webp);
 	position:relative;
 	z-index:1;
 }
 .single-slide-item.slide-2 {
-	background-image:url(../../assets/images/banner/banner3.jpg);
+	background-image:url(../../assets/images/banner/banner2.webp);
 	position:relative;
 	z-index:1;
 }
 .single-slide-item.slide-1:before,.single-slide-item.slide-2:before{
-	/* background:rgba(115,112,215,.6); */
+	background:rgba(142, 141, 141, 0.438);
 	position:absolute;
 	left:0;
 	top:0;

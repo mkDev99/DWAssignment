@@ -270,14 +270,9 @@
 										<div class="single-slide-item-content">
 											<h2>Start Your Home Gym Journey</h2>
 											<p>
-												We are the unique Provider for Your Dream Home Gym. 
+												We are the unique Provider for Your Dream Home Gym 
 											</p>
-											<button type="button" class="slide-btn">
-											get started
-											</button>
-											<button type="button"  class="slide-btn">
-												explore more
-											</button>
+											
 											
 										</div><!-- /.single-slide-item-content-->
 									</div><!-- /.col-->
@@ -297,13 +292,7 @@
 											<p>
 												We Provide the Best Quality Products for Your Home Gym  
 											</p>
-											<button type="button"  class="slide-btn">
-												get started
-											</button>
-											<button type="button"  class="slide-btn
-											">
-												explore more
-											</button>
+											
 										</div><!-- /.single-slide-item-content-->
 									
 									</div><!-- /.col-->
