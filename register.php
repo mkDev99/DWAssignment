@@ -188,95 +188,77 @@
                                 <div class="contact-form">
                                     <form action="register.php" method="POST" enctype="multipart/form-data">
                                         <div class="row">
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="form-group">
-                                                  <label for="txtcustomername">Name</label>
-                                                </div>
-                                            </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                             <div class="col-sm-6 col-xs-12">
                                                 <div class="form-group">
                                                   <input type="text" class="form-control" id="name" placeholder="Name" name="txtcustomername">
                                                 </div>
                                             </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="form-group">
-                                                  <label for="txtemailaddress">Email Address</label>
-                                                </div>
-                                            </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                             <div class="col-sm-6 col-xs-12">
                                                 <div class="form-group">
                                                   <input type="text" class="form-control" id="email" placeholder="Email Address" name="txtemailaddress">
                                                 </div>
                                             </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="form-group">
-                                                  <label for="txtpassword">Password</label>
-                                                </div>
-                                            </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                             <div class="col-sm-6 col-xs-12">
                                                 <div class="form-group">
                                                   <input type="password" class="form-control" id="password" placeholder="Password" name="txtpassword">
                                                 </div>
                                             </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="form-group">
-                                                  <label for="txtphonenumber">Phone Number</label>
-                                                </div>
-                                            </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                             <div class="col-sm-6 col-xs-12">
                                                 <div class="form-group">
                                                   <input type="phone" class="form-control" id="phone" placeholder="Phone Number" name="txtphonenumber">
                                                 </div>
                                             </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="form-group">
-                                                  <label for="txtaddress">Address</label>
-                                                </div>
-                                            </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                             <div class="col-sm-6 col-xs-12">
                                                 <div class="form-group">
                                                   <textarea class="form-control" id="address" placeholder="Address" name="txtaddress" required></textarea>
                                                 </div>
                                             </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-sm-6 col-xs-12">
-                                                <div class="form-group">
-                                                  <label for="customerprofile">Profile Picture</label>
-                                                </div>
-                                            </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                             <div class="col-sm-6 col-xs-12">
                                                 <div class="form-group">
                                                   <input type="file" name="customerprofile" required>
                                                 </div>
                                             </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-sm-6 col-xs-12"></div>
-
+                                            <div class="col-sm-3 col-xs-12"></div>
                                             <div class="col-sm-6 col-xs-12">
                                                 <div class="form-group">
                                                     <div class="g-recaptcha" data-sitekey="6LeY9WEgAAAAAPZdzH7g9wxFutNgQyUzoYDo0e3P"></div>
                                                 </div>
                                             </div>
+                                            <div class="col-sm-3 col-xs-12"></div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-sm-12">
+                                            <div class="col-sm-9">
                                                 <div class="single-contact-btn pull-right">
                                                     <button class="contact-btn" type="submit" name="btnregister">submit</button>
                                                 </div>
@@ -397,10 +379,7 @@
             <div class="row">
                 <div class="col-sm-7">
                     <div class="foot-copyright pull-left">
-                        <p>
-                            &copy; All Rights Reserve
-                             <a href="https://www.themesine.com">ThemeSINE</a>
-                        </p>
+                        
                     </div>
                 </div>
                 <div class="col-sm-5">

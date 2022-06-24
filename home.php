@@ -214,7 +214,7 @@
 								<span class="icon-bar"></span>
 							</button>
 							<a class="navbar-brand" href="index.html">
-								<img src="assets/images/logo/logo1.png" alt="logo">
+								<img src="assets/images/logo/logo.png" alt="logo">
 							</a>
 						</div><!--/.navbar-header -->
 

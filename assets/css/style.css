@@ -295,11 +295,11 @@ html,body{
 .navbar-default .navbar-toggle:focus,
  .navbar-default .navbar-toggle:hover {
     background-color: transparent;
-    border: 1px solid #000;
+    border: 1px solid #ffffff;
     margin-top: 25px;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #000;
+    background-color: #ffffff;
 
 }/* navbar-toggle*/
 
@@ -552,7 +552,7 @@ html,body{
 
 /* section-header */
 .section-header h2{
-	color: #44454f;
+	color: #000000;
 	font-size: 30px;
 	font-family: 'Playfair Display', serif;
 	font-weight: 700;
@@ -562,7 +562,7 @@ html,body{
 }
 .section-header p{
 	color: #888;
-	font-size: 16px;
+	font-size: 20px;
 	font-family: 'Poppins', sans-serif;
 	max-width: 1000px;
     margin: 0 auto;
@@ -716,13 +716,13 @@ html,body{
     transition: .5s;
 }
 .service-txt h2 a{
-	color:#44454f;	
+	color:#000000;	
 	font-size:24px;
 	font-family: 'Playfair Display', serif;
 	padding: 47px 0 25px;
 }
 .service-txt p {
-	color:#756c6a;	
+	color:#000000;
 	font-size:16px;
 	font-family: 'Poppins', sans-serif;
 	line-height: 1.67;
@@ -1379,7 +1379,7 @@ a:active.learn-btn{
 	position: relative;
 }
 .contact:before{
-	background:rgba(115,112,215,.85);
+	background:rgba(112, 134, 230, 0.301);
 	position:absolute;
 	left:0;
 	top:0;
@@ -1411,11 +1411,9 @@ a:active.learn-btn{
 .contact-form {
 	position: relative;
 	margin: 50px 0 0 0;
-	
 }
 .contact-form  .form-group {
     margin-bottom: 15px;
-	
 }
 .contact-form .form-control {
 	padding: 24px 21px;
@@ -1427,11 +1425,13 @@ a:active.learn-btn{
     background:#f9faff;
     color: #888;
 	resize: none;
-
+	align-self: center;
 }
 .contact-form .form-group {
     padding-bottom:7px;
+	align-self: center;
 }
+
 
 /*--contct button--*/
 .contact-form .single-contact-btn button{

@@ -54,6 +54,8 @@
 
     <title>Login | HGE</title>
 
+   
+
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
 		
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -179,49 +181,42 @@
     <section  class="contact">
         <div class="container">
             <div class="contact-details">
-                <div class="section-header contact-head  text-center">
+                <div class="section-header contact-head text-center">
                     <h2>Log In</h2>
 
                     <div class="contact-content">
                         <div class="single-contact-box">
-                            <div class="contact-form">
+                            <div class="contact-form ">
                                 <form action="login.php" method="post" enctype="multipart/form-data">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <label for="txtemail">Email</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="email" placeholder="Please Enter Your Email" name="txtemail">
-                                            </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-3"></div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="email" placeholder="Please Enter Your Email" name="txtemail">
                                         </div>
                                     </div>
+                                    <div class="col-xs-12 col-sm-3"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-3"></div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="password" placeholder="Please Enter Your Password" name="txtpassword">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-3"></div>
+                                </div>
 
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <label for="txtpassword">Password</label>
-                                            </div>
+                                <div class="row">
+                                    <div class="col-sm-12" id="btn-row">
+                                        <div class="single-contact-btn pull-right">
+                                            <button class="contact-btn" type="reset" name="btnreset">cancel</button>
                                         </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                                <input type="password" class="form-control" id="password" placeholder="Please Enter Your Password" name="txtpassword">
-                                            </div>
+                                        <div class="single-contact-btn pull-right">
+                                            <button class="contact-btn" type="submit" name="btnlogin">log in</button>
                                         </div>
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="single-contact-btn pull-right">
-                                                <button class="contact-btn" type="reset" name="btnreset">cancel</button>
-                                            </div>
-                                            <div class="single-contact-btn pull-right">
-                                                <button class="contact-btn" type="submit" name="btnlogin">log in</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
                                 </form>
                             </div>
                         </div>
@@ -395,5 +390,7 @@
    
     <script type="text/javascript" src="assets/js/jak-menusearch.js"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
+
+    
 </body>
 </html>
