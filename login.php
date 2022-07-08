@@ -113,19 +113,6 @@
                         <a href="login.php">
                             Log in
                         </a>
-                        
-                        
-        
-                    </li>
-                    <li>
-                        <div class="social-icon">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            </ul>
-                        </div>
                     </li>
                 </ul>
             </div>
@@ -208,7 +195,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-sm-12" id="btn-row">
+                                    <div class="col-sm-9" id="btn-row">
                                         <div class="single-contact-btn pull-right">
                                             <button class="contact-btn" type="reset" name="btnreset">cancel</button>
                                         </div>

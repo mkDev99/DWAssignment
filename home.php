@@ -222,12 +222,13 @@
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
 								<li class="active"><a href="index.html">Home</a></li>
+								<li><a href="information.html">Information</a></li>
 								<li><a href="wanted.php">Wanted</a></li>
-								<li><a href="service.html">Service</a></li>
-								<li><a href="project.html">Project</a></li>
-								<li><a href="team.html">Team</a></li>
-								<li><a href="blog.html">Blog</a></li>
+								<li><a href="service.html">Workshop</a></li>
+								<li><a href="project.html">Gallery</a></li>
 								<li><a href="contact.php">Contact</a></li>
+								<li><a href="featured.html">Featured</a></li>
+								
 								<li>
 									<a href="#">
 										<span class="lnr lnr-cart"></span>
@@ -391,12 +392,7 @@
 											<h2>
 												<a href="#">busisness planning</a>
 											</h2>
-											<p>
-												Lorem ipsum dolo dolor in  in voluptate velit esse cillum dolore. epteur sint oat cupidatat 
-											</p>
-											<a href="#" class="service-btn">
-												learn more
-											</a>
+											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.182370726!2d-0.10159865000000001!3d51.52864165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2smm!4v1656140084299!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 										</div><!--/.service-txt-->
 									</div><!--/.service-single-->
 								</div><!--/.col-->

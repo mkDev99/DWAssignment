@@ -112,19 +112,6 @@
                         <a href="login.php">
                             Log in
                         </a>
-                        
-                        
-        
-                    </li>
-                    <li>
-                        <div class="social-icon">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            </ul>
-                        </div>
                     </li>
                 </ul>
             </div>
