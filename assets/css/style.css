@@ -442,7 +442,6 @@ html,body{
 .cookie-disclaimer .container {
     text-align: center;
     padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .cookie-disclaimer .cookie-close {
@@ -554,19 +553,19 @@ html,body{
 .section-header h2{
 	color: #000000;
 	font-size: 30px;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
 }
 .section-header h2 span{
 	color: #4d4e54;
 }
 .section-header p{
-	color: #888;
+	color: rgb(86, 86, 86);
 	font-size: 20px;
 	font-family: 'Poppins', sans-serif;
 	max-width: 1000px;
     margin: 0 auto;
-    margin-top: 32px;
+    margin-top: 10px;
     line-height: 1.8;
 }/* section-header */
 
@@ -688,11 +687,12 @@ html,body{
 /*-------------------------------------
 		6. Service
 --------------------------------------*/
-.service{
-    padding: 116px 0 85px;
+.service {
+	padding-top: 25px;
+	margin-top: -10px;
 }
 .service-single{
-	margin-bottom:30px;
+	margin-bottom:10px;
 }
 .service-content-one{
 	margin-top: 42px;
@@ -701,7 +701,8 @@ html,body{
 }
 
 .service-img img{
-	height: 65px;
+	height: 170px;
+	width: 220px;
 	margin-top: 30px;
 }
 /*.service-txt*/
@@ -718,14 +719,14 @@ html,body{
 .service-txt h2 a{
 	color:#000000;	
 	font-size:24px;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Roboto', serif;
 	padding: 47px 0 25px;
 }
 .service-txt p {
 	color:#000000;
 	font-size:16px;
 	font-family: 'Poppins', sans-serif;
-	line-height: 1.67;
+	line-height: 1.25;
 }
 a.service-btn,
 a:active.service-btn,
@@ -858,7 +859,7 @@ a:focus.service-btn{
 	position:absolute;
 	height:100%;
 	width:100%;
-	background:rgba(115,112,216,.75);
+	background:rgba(39, 39, 39, 0.75);
 	display:flex;
 	align-items:center;
 	text-transform: capitalize;
@@ -1318,8 +1319,8 @@ a:active.learn-btn{
     display:block;
     font-size:16px;
 	margin-bottom: 17px;
-	font-family: 'Playfair Display', serif;
-	font-style: italic ;
+	font-family: 'Poppins', serif;
+	font-style: normal;
 	max-width: 350px;
 	font-weight: 600;
 	line-height: 1.4;
@@ -1332,14 +1333,14 @@ a:active.learn-btn{
 }
 
 .news-box-inner span{
-	color:#908edf;
+	color:#8b8b8b;
 
 }
 a.learn-btn,
 a:hover.learn-btn,
 a:focus.learn-btn,
 a:active.learn-btn{
-    color: #7086e6;
+    color: #6c6c6d;
     font-size:12px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
