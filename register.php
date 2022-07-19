@@ -92,12 +92,12 @@
                 <ul class="pull-left">
                     <li>
                         <a href="#">
-                            <i class="fa fa-phone" aria-hidden="true"></i> +992 563 542
+                            <i class="fa fa-phone" aria-hidden="true"></i> +44 000 000 000
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>info@mail.com
+                            <i class="fa fa-envelope" aria-hidden="true"></i>mail@hge.com
                         </a>
                     </li>
                 </ul>

@@ -697,7 +697,7 @@ html,body{
 .service-content-one{
 	margin-top: 42px;
 	margin-bottom: 60px;
-
+	
 }
 
 .service-img img{
@@ -705,11 +705,16 @@ html,body{
 	width: 220px;
 	margin-top: 30px;
 }
+
+.blog-img img{
+	
+}
 /*.service-txt*/
 .service-single {
 	max-width: 304px;
     margin: 0 auto;
    	margin-bottom: 15px;
+	
 	-webkit-transition: .5s; 
 	-moz-transition:.5s; 
 	-ms-transition:.5s; 
@@ -724,6 +729,7 @@ html,body{
 }
 .service-txt p {
 	color:#000000;
+	padding: 0em 1em 1em;
 	font-size:16px;
 	font-family: 'Poppins', sans-serif;
 	line-height: 1.25;
