@@ -102,7 +102,7 @@
 							<?php
 								if(!isset($_SESSION['CustomerID']))
 								{
-									echo "<script> alert ('Please Log in') </script>";
+									echo "<script>window.alert('Please Log in')</script>";
 								}
 								else
 								{
@@ -123,58 +123,6 @@
 								Register
 							</a>
 							||
-                            
-
-						
-							
-							<!-- <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-								<div class="modal-dialog modal-sm" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											 	<span aria-hidden="true">
-											 		<i class="fa fa-close"></i>
-											 	</span>
-											 </button> 
-											<h4 class="modal-title" id="mySmallModalLabel">
-												Sign In
-											</h4> 
-											<form class="sm-frm" style="padding:25px">
-												<label>Name :</label>
-												<input type="text" class="form-control" placeholder="Enter Email">
-												<label>Passoward :</label>
-												<input type="text" class="form-control" placeholder="Enter Passoward">
-												<label><input type="checkbox" name="personality"> Remenber Me</label>
-												<button type="button" class="btn btn-default pull-right">Submit</button>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div> -->
-							
-							<!-- <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-								<div class="modal-dialog modal-lg" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											 	<span aria-hidden="true">
-											 		<i class="fa fa-close"></i>
-											 	</span>
-											</button>  
-											<h4 class="modal-title" id="myLargeModalLabel">Register</h4> 
-											<form class="lg-frm" style="padding:25px">
-												<label>Name :</label>
-												<input type="text" class="form-control" placeholder="Enter Name">
-												<label>Email :</label>
-												<input type="text" class="form-control" placeholder="Enter Email">
-												<label>Passoward :</label>
-												<input type="text" class="form-control" placeholder="Enter Passoward">
-												<button type="button" class="btn btn-default pull-right">Submit</button>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div> -->
 						</li><!--/li -->
 						<li>
 							<div class="social-icon">

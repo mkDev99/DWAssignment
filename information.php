@@ -1,4 +1,6 @@
-<!doctype html>
+<?php
+	include('connect.php');
+?><!doctype html>
 <html class="no-js" lang="en">
 
     <head>
@@ -18,7 +20,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 		
         <!-- TITLE OF SITE -->
-        <title>Workshop | HGE</title>
+        <title>Information | HGE</title>
 
         <!-- for title img -->
 		<link rel="shortcut icon" type="image/icon" href="assets/images/logo/favicon.png"/>
@@ -120,7 +122,7 @@
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
 								<li ><a href="index.html">Home</a></li>
-								<li class="active"><a href="information.html">Information</a></li>
+								<li class="active"><a href="information.php">Information</a></li>
 								<li><a href="wanted.php">Wanted</a></li>
 								<li><a href="workshop.html">Workshop</a></li>
 								<li><a href="gallery.php">Gallery</a></li>
@@ -158,7 +160,7 @@
 												<a href="#">Home Exercise Gyms</a>
 											</h2>
 											<p>
-												How to start building a full gym inside your home 
+												How to start building a full gym inside your home ...
 											</p>
 											
 										</div><!--/.service-txt-->
@@ -174,7 +176,7 @@
 												<a href="#">Wearable Technology</a>
 											</h2>
 											<p>
-												 Benefits that you get from keeping track of your exercises
+												 Benefits that you get from keeping track of your exercises...
 											</p>
 										</div>
 									</div>
@@ -182,14 +184,14 @@
 								<div class="col-sm-4 col-xs-12">
 									<div class="service-single text-center">
 										<div class="service-img">
-											<img src="assets/images/service/service3.jpg" alt="image of service" />
+											<img src="assets/images/blog/bl3.jpg" alt="image of service" />
 										</div>
 										<div class="service-txt">
 											<h2>
 												<a href="#">Strength Training with Free Weights</a>
 											</h2>
 											<p>
-												 
+												Train your muscles properly with free weights to ... 
 											</p>
 											
 										</div><!--/.service-txt-->
@@ -206,64 +208,75 @@
 			<div class="container">
 				<div class="service-details">
 					<div class="section-header text-center">
-						<h2>our repairs</h2>
+						<h2>latest products</h2>
 						<p>
-							With the experienced servicemen, we provide repairs, upgrades and many more.
+							Check out our latest products
 						</p>
 					</div><!--/.section-header-->
 					<div class="service-content-one">
-						<div class="row">
+						<?php
+							$query = "SELECT * FROM product ORDER BY ProductID DESC";
+							$ret = mysqli_query($connect, $query);
+
+							$count = mysqli_num_rows($ret);
+
+							if ($count == 0)
+							{
+								echo "<p>No product found</p>";
+								exit();
+							}
+							else
+							{
+								for($a = 0; $a < $count; $a+=3)
+								{
+									$query1 = "SELECT * FROM product ORDER BY ProductID LIMIT $a, 3";
+									$ret1 = mysqli_query($connect, $query1);
+
+									$count1 = mysqli_num_rows($ret1);
+
+									echo '<div class="row">';
+
+									for($i = 0; $i < $count1; $i++)
+									{
+										$data = mysqli_fetch_array($ret1);
+										$ProductID = $data['ProductID'];
+										$ProductName = $data['ProductName'];
+										$Price = $data['Price'];
+										$Year = $data['Year'];
+										$Quantity = $data['Quantity'];
+										$ProductImage1 = $data['ProductImage1'];
+										$ProductImage2 = $data['ProductImage2'];
+										$Description = $data['Description'];
+										$ProductTypeID = $data['ProductTypeID'];
+										$ProductCondition = $data['ProductCondition'];
+						?>
 							<div class="col-sm-4 col-xs-12">
 								<div class="service-single text-center">
 									<div class="service-img">
-										<img src="assets/images/service/service4.jpg" alt="image of service" />
+										<img src="<?php echo $ProductImage1 ?>" alt="image of product"/>
 									</div><!--/.service-img-->
 									<div class="service-txt">
 										<h2>
-											<a href="#">Door-to-Door Repair Service</a>
+											<a href=""><?php echo $ProductName ?></a>
+											<p>Condition : <?php echo $ProductCondition ?></p>
 										</h2>
 										<p>
-											Our service man comes to your home for HGE product repairs.
+											<?php echo "<p>$ $Price"; ?>
 										</p>
 										
+										<a href="ProductDetails.php?ProductID=<?php echo $ProductID?>">See more</a>
 									</div><!--/.service-txt-->
 								</div><!--/.service-single-->
 							</div><!--/.col-->
-							<div class="col-sm-4 col-xs-12">
-								<div class="service-single text-center">
-									<div class="service-img">
-										<img src="assets/images/service/service5.jpg" alt="image of service" />
-									</div><!--/.service-img-->
-									<div class="service-txt">
-										<h2>
-											<a href="#">6 month Limited Warranty </a>
-										</h2>
-										<p>
-											Every repaired products by our service get 6-month limited warranty.
-										</p>
-									</div><!--/.service-txt-->
-								</div><!--/.service-single-->
-							</div><!--/.col-->
-							<div class="col-sm-4 col-xs-12">
-								<div class="service-single text-center">
-									<div class="service-img">
-										<img src="assets/images/service/service6.jpg" alt="image of service" />
-									</div><!--/.service-img-->
-									<div class="service-txt">
-										<h2>
-											<a href="#">OEM spare parts</a>
-										</h2>
-										<p>
-											We only use OEM products for your repairs.
-										</p>
-									</div><!--/.service-txt-->
-								</div><!--/.service-single-->
-							</div><!--/.col-->
-						</div><!--/.row-->
+						<?php
+									}
+									echo "</div>";
+								}
+							}
+						?>
 					</div><!--/.service-content-one-->
 				</div><!--/.service-details-->
 			</div><!--/.container-->
-			
 	</section><!--/.service-->
 	<!--service end-->
 
