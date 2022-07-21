@@ -63,7 +63,6 @@
 	
 	<body>
 		
-		
 		<section class="header">
 			<div class="container">	
 				<div class="header-left">
@@ -83,11 +82,11 @@
 				<div class="header-right pull-right">
 					<ul>
 						<li class="reg">
-							<a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">
+							<a href="register.php">
 								Register
 							</a>
 								/
-							<a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">
+							<a href="login.php">
 								Log in
 							</a>
 						</li>
@@ -128,7 +127,6 @@
 								<li><a href="gallery.php">Gallery</a></li>
 								<li><a href="contact.php">Contact</a></li>
 								<li><a href="featured.php">Featured</a></li>
-								
 							</ul><!-- / ul -->
 						</div><!-- /.navbar-collapse -->
 					</nav><!--/nav -->
@@ -229,7 +227,7 @@
 							{
 								for($a = 0; $a < $count; $a+=3)
 								{
-									$query1 = "SELECT * FROM product ORDER BY ProductID LIMIT $a, 3";
+									$query1 = "SELECT * FROM product WHERE ForSale = 'No' ORDER BY ProductID LIMIT $a, 3";
 									$ret1 = mysqli_query($connect, $query1);
 
 									$count1 = mysqli_num_rows($ret1);

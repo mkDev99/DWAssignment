@@ -42,6 +42,7 @@
         Description varchar(100),
         ProductTypeID int,
         FOREIGN KEY (ProductTypeID) references producttype(ProductTypeID),
+        ForSale varchar(10),
         ProductCondition varchar(30)
     )";
 

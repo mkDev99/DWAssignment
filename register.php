@@ -138,25 +138,12 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li ><a href="index.html">Home</a></li>
-                            <li ><a href="about.html">About</a></li>
-                            <li><a href="service.html">Service</a></li>
-                            <li><a href="project.html">Project</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="information.php">Information</a></li>
+                            <li><a href="wanted.php">Wanted</a></li>
+                            <li><a href="workshop.html">Workshop</a></li>
+                            <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="contact.php">Contact</a></li>
-                            <li>
-                                <a href="#">
-                                    <span class="lnr lnr-cart"></span>
-                                </a>
-                            </li>
-                            <li class="search">
-                                <form action="">
-                                    <input type="text" name="search" placeholder="Search....">
-                                    <a href="#">
-                                        <span class="lnr lnr-magnifier"></span>
-                                    </a>
-                                </form>
-                            </li>
+                            <li><a href="featured.php">Featured</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -269,122 +256,121 @@
 			</div>
     </div>
 
+    <!--hm-footer start-->
     <section class="hm-footer">
-        <div class="container">
-            <div class="hm-footer-details">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="hm-footer-widget">
-                            <div class="hm-foot-title ">
-                                <div class="logo">
-                                    <a href="index.html">
-                                        <img src="assets/images/logo/logo.png" alt="logo" />
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="hm-foot-para">
-                                <p>
-                                    Lorem ipsum dolor sit amt conetur adcing elit. Sed do eiusod tempor utslr. Ut laboris nisi ut aute irure dolor in rein velit esse.
-                                </p>
-                            </div>
-                            <div class="hm-foot-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" col-md-2 col-sm-6 col-xs-12">
-                        <div class="hm-footer-widget">
-                            <div class="hm-foot-title">
-                                <h4>Useful Links</h4>
-                            </div>
-                            <div class="footer-menu ">	  
-                                <ul class="">
-                                    <li><a href="index.html" >Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="services.html">Service</a></li>
-                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="contact.html">Contact us</a></li> 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" col-md-3 col-sm-6 col-xs-12">
-                        <div class="hm-footer-widget">
-                            <div class="hm-foot-title">
-                                <h4>from the news</h4>
-                            </div>
-                            <div class="hm-para-news">
-                                <a href="blog_single.html">
-                                    The Pros and Cons of Starting an Online Business.
-                                </a>
-                                <span>12th June 2017</span>
-                            </div>
-                            <div class="footer-line">
-                                <div class="border-bottom"></div>
-                            </div>
-                            <div class="hm-para-news">
-                                <a href="blog_single.html">
-                                    The Pros and Cons of Starting an Online Business.
-                                </a>
-                                <span>12th June 2017</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" col-md-3 col-sm-6  col-xs-12">
-                        <div class="hm-footer-widget">
-                            <div class="hm-foot-title">
-                                <h4> Our Newsletter</h4>
-                            </div>
-                            <div class="hm-foot-para">
-                                <p class="para-news">
-                                    Subscribe to our newsletter to get the latest News and offers..
-                                </p>
-                            </div>
-                            <div class="hm-foot-email">
-                                <div class="foot-email-box">
-                                    <input type="text" class="form-control" placeholder="Email Address">
-                                </div>
-                                <div class="foot-email-subscribe">
-                                    <button type="button" >go</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer class="footer-copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-7">
-                    <div class="foot-copyright pull-left">
-                        
-                    </div>
-                </div>
-                <div class="col-sm-5">
-                    <div class="foot-menu pull-right
-                    ">	  
-                        <ul>
-                            <li ><a href="#">legal</a></li>
-                            <li ><a href="#">sitemap</a></li>
-                            <li ><a href="#">privacy policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div id="scroll-Top">
-                <i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-            </div>
-        </div>
-    </footer>
+		<div class="container">
+			<div class="hm-footer-details">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="hm-footer-widget">
+							<div class="hm-foot-title ">
+								<div class="logo">
+									<a href="index.html">
+										<img src="assets/images/logo/logo.png" alt="logo" />
+									</a>
+								</div><!-- /.logo-->
+							</div><!--/.hm-foot-title-->
+							<div class="hm-foot-icon">
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><!--/li-->
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li><!--/li-->
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li><!--/li-->
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li><!--/li-->
+								</ul><!--/ul-->
+							</div><!--/.hm-foot-icon-->
+						</div><!--/.hm-footer-widget-->
+					</div><!--/.col-->
+					<div class=" col-md-2 col-sm-6 col-xs-12">
+						<div class="hm-footer-widget">
+							<div class="hm-foot-title">
+								<h4>Useful Links</h4>
+							</div><!--/.hm-foot-title-->
+							<div class="footer-menu ">	  
+								<ul class="">
+									<li><a href="index.html" >Home</a></li>
+									<li><a href="about.html">Information</a></li>
+									<li><a href="services.html">Wanted</a></li>
+									<li><a href="portfolio.html">Workshop</a></li>
+									<li><a href="blog.html">Gallery</a></li>
+									<li><a href="contact.html">Contact us</a></li>
+									<li><a href="contact.html">Featured</a></li> 
+								</ul>
+							</div><!-- /.footer-menu-->
+						</div><!--/.hm-footer-widget-->
+					</div><!--/.col-->
+					<div class=" col-md-3 col-sm-6 col-xs-12">
+						<div class="hm-footer-widget">
+							<div class="hm-foot-title">
+								
+							</div><!--/.hm-foot-title-->
+							<div class="hm-para-news">
+								<a href="">
+									You are at the Registration page.
+								</a>
+							</div><!--/.hm-para-news-->
+							<div class="footer-line">
+								<div class="border-bottom"></div>
+							</div>
+							
+						</div><!--/.hm-footer-widget-->
+					</div><!--/.col-->
+					<div class=" col-md-3 col-sm-6  col-xs-12">
+						<div class="hm-footer-widget">
+							<div class="hm-foot-title">
+								<h4> Our Newsletter</h4>
+							</div><!--/.hm-foot-title-->
+							<div class="hm-foot-para">
+								<p class="para-news">
+									Subscribe to our newsletter to get the latest News and offers..
+								</p>
+							</div><!--/.hm-foot-para-->
+							<div class="hm-foot-email">
+								<div class="foot-email-box">
+									<input type="text" class="form-control" placeholder="Email Address">
+								</div><!--/.foot-email-box-->
+								<div class="foot-email-subscribe">
+									<button type="button" >go</button>
+								</div><!--/.foot-email-icon-->
+							</div><!--/.hm-foot-email-->
+						</div><!--/.hm-footer-widget-->
+					</div><!--/.col-->
+				</div><!--/.row-->
+			</div><!--/.hm-footer-details-->
+		</div><!--/.container-->
+
+		</section><!--/.hm-footer-details-->
+		<!--hm-footer end-->
+		
+		<!-- footer-copyright start -->
+		<footer class="footer-copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-7">
+						<div class="foot-copyright pull-left">
+							<p>
+								&copy; All Rights Reserved @ HGE
+							</p>
+						</div><!--/.foot-copyright-->
+					</div><!--/.col-->
+					
+					<div class="col-sm-5">
+						<div class="foot-menu pull-right
+						">	  
+							<ul>
+								<li ><a href="#">legal</a></li>
+								<li ><a href="#">sitemap</a></li>
+								<li ><a href="#">privacy policy</a></li>
+							</ul>
+						</div><!-- /.foot-menu-->
+					</div><!--/.col-->
+				</div><!--/.row-->
+				<div id="scroll-Top">
+					<i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div><!--/.scroll-Top-->
+			</div><!-- /.container-->
+
+		</footer><!-- /.footer-copyright-->
+		<!-- footer-copyright end -->
     
 
 

@@ -10,6 +10,7 @@
         $description = $_POST['txtdescription'];
         $cboType = $_POST['cboType'];
         $optCondition = $_POST['optCondition'];
+        $optSale = $_POST['optSale'];
 
         $image1 = $_FILES['productimage1']['name'];
         $folder = "images/";
@@ -44,8 +45,8 @@
         }
         else
         {
-            $insert = "INSERT INTO product(ProductName, Price, Year, Quantity, ProductImage1, ProductImage2, Description, ProductTypeID, ProductCondition)
-            values('$productname', '$price', '$year', '$quantity', '$filename1', '$filename2', '$description', '$cboType', '$optCondition')";
+            $insert = "INSERT INTO product(ProductName, Price, Year, Quantity, ProductImage1, ProductImage2, Description, ProductTypeID, ForSale, ProductCondition)
+            values('$productname', '$price', '$year', '$quantity', '$filename1', '$filename2', '$description', '$cboType', '$optSale', '$optCondition')";
 
             $query = mysqli_query($connect, $insert);
 
@@ -82,7 +83,7 @@
                 <tr>
                     <td>Price</td>
                     <td>
-                        <input type="text" name="txtprice" placeholder="Enter the price" required>
+                        <input type="text" name="txtprice" placeholder="Enter the price" required> £
                     </td>
                 </tr>
                 <tr>
@@ -144,6 +145,15 @@
                             <option value="">Please Choose Product Condition</option>
                             <option value="New">New</option>
                             <option value="Used">Used</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>For Sale</td>
+                    <td>
+                        <select name="optSale">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
                         </select>
                     </td>
                 </tr>

@@ -103,6 +103,7 @@
 								if(!isset($_SESSION['CustomerID']))
 								{
 									echo "<script>window.alert('Please Log in')</script>";
+									echo "<script>window.location='login.php'</script>";
 								}
 								else
 								{
@@ -171,7 +172,7 @@
 							<ul class="nav navbar-nav navbar-right">
 								<li class="active"><a href="index.html">Home</a></li>
 								<li><a href="information.html">Information</a></li>
-								<li><a href="wanted.php">Wanted</a></li>
+								<li><a href="wanted1.php">Wanted</a></li>
 								<li><a href="service.html">Workshop</a></li>
 								<li><a href="project.html">Gallery</a></li>
 								<li><a href="contact.php">Contact</a></li>

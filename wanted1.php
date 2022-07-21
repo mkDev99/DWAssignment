@@ -1,3 +1,13 @@
+<?php
+	session_start();
+	include('connect.php');
+
+	if(!isset($_SESSION['CustomerID']))
+	{
+		echo "<script>window.alert('Please Log in')</script>";
+		echo "<script>window.location='login.php'</script>";
+	}
+?>
 <!Doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -113,7 +123,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="index.php">
+							<a class="navbar-brand" href="home.php">
 								<img src="assets/images/logo/logo.png" alt="logo">
 							</a>
 						</div><!--/.navbar-header -->
@@ -121,32 +131,49 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
-								<li class="active"><a href="index.html">Home</a></li>
+								<li><a href="index.html">Home</a></li>
 								<li><a href="information.html">Information</a></li>
-								<li><a href="about.html">About</a></li>
+								<li class="active"><a href="wanted1.php">Wanted</a></li>
 								<li><a href="workshop.html">Workshop</a></li>
-								<li><a href="project.html">Project</a></li>
-								<li><a href="team.html">Team</a></li>
+								<li><a href="gallery.php">Gallery</a></li>
 								<li><a href="contact.php">Contact</a></li>
-								
+								<li><a href="featured.php">Featured</a></li>
 								<li class="search">
-									<form action="">
-										<input type="text" name="search" placeholder="Search....">
-										<a href="#">
+									<form action="wanted1.php" method="POST">
+										<input type="text" name="txtsearch" placeholder="Search....">
+										<a href="#" name="btnSearch">
 											<span class="lnr lnr-magnifier"></span>
 										</a>
 									</form>
+									<?php
+										if (isset($_POST['btnSearch']))
+										{
+											$second = "SELECT * FROM product WHERE ProductCondition = 'Used'
+														AND ProductName LIKE '%$second%'";
+											$result = mysqli_query($connect, $query);
+											$count = mysqli_num_rows($result);
+
+											if($count > 0)
+											{
+												for ($i = 0; $i < $count; $i+=5)
+												{
+													$query1 = "SELECT * FROM product WHERE ProductCondition = 'Used'
+																AND ProductName LIKE '%$second%' LIMIT $i,5";
+													$result1 = mysqli_query($connect, $query1);
+													$count1 = mysqli_num_rows($result1);
+												}
+											}
+										}
+									?>
 								</li>
 							</ul><!-- / ul -->
 						</div><!-- /.navbar-collapse -->
 					</nav><!--/nav -->
 				</div><!--/.menubar -->
 			</div><!-- /.container -->
-
 		</section><!--/#menu-->
 		<!--menu end-->
 
-        		<!-- jaquery link -->
 
 		<script src="assets/js/jquery.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->

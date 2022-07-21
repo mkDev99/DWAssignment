@@ -276,6 +276,11 @@ html,body{
 	padding-left: 27px;
 
 }
+.navbar-nav li a img {
+	margin-top: -10px;
+	width: 91px;
+	height: 48px;
+}
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:active,

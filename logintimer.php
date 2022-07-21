@@ -39,7 +39,7 @@
  		{
  			clearInterval(x);
  			document.getElementById("Timer").innerHTML="";
- 			location="CustomerLogin.php";
+ 			location="login.php";
  		}
  		},1000); 
  	</script>
