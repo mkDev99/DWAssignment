@@ -13,7 +13,7 @@
         $count = mysqli_num_rows($query);
         if($count > 0)
         {
-            echo "<script>alert('Product Type Registration Unsuccessful')</script>";
+            echo "<script>alert('Product Type Already Existed')</script>";
         }
         else
         {
@@ -25,7 +25,7 @@
             if($query)
             {
                 echo "<script>alert('Product Type Registered Successfully')</script>";
-                echo "<script>window.location('ProductTypeRegistrationForm.php')</script>";
+                echo "<script>window.location('productregistration.php')</script>";
             }
         }
     }

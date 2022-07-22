@@ -227,7 +227,7 @@
 							{
 								for($a = 0; $a < $count; $a+=3)
 								{
-									$query1 = "SELECT * FROM product WHERE ForSale = 'No' ORDER BY ProductID LIMIT $a, 3";
+									$query1 = "SELECT * FROM product WHERE ProductCondition = 'New' ORDER BY ProductID LIMIT $a, 3";
 									$ret1 = mysqli_query($connect, $query1);
 
 									$count1 = mysqli_num_rows($ret1);
@@ -259,7 +259,7 @@
 											<p>Condition : <?php echo $ProductCondition ?></p>
 										</h2>
 										<p>
-											<?php echo "<p>$ $Price"; ?>
+											<?php echo "<p>£ $Price"; ?>
 										</p>
 										
 										<a href="ProductDetails.php?ProductID=<?php echo $ProductID?>">See more</a>
@@ -277,6 +277,15 @@
 			</div><!--/.container-->
 	</section><!--/.service-->
 	<!--service end-->
+
+	<div class="cookie-disclaimer">
+        <div class="cookie-close accept-cookie"><i class="fa fa-times"></i></div>
+        <div class="container">
+            <p>This is a dummy information for cookie. By using our website, you agree to our <a href="#">Terms & Privacy Policy</a>. 
+            <br>For further information, please contact us via our Contact Us form.</p>
+            <button type="button" class="btn accept-cookie">Agree!</button>
+        </div>
+    </div>
 
 	<!--hm-footer start-->
 	<section class="hm-footer">
@@ -314,13 +323,13 @@
 							</div><!--/.hm-foot-title-->
 							<div class="footer-menu ">	  
 								<ul class="">
-									<li><a href="index.html" >Home</a></li>
-									<li><a href="about.html">Information</a></li>
-									<li><a href="services.html">Wanted</a></li>
-									<li><a href="portfolio.html">Workshop</a></li>
-									<li><a href="blog.html">Gallery</a></li>
-									<li><a href="contact.html">Contact us</a></li>
-									<li><a href="contact.html">Featured</a></li> 
+								<li><a href="home.php" >Home</a></li>
+									<li><a href="information.php">Information</a></li>
+									<li><a href="wanted.php">Wanted</a></li>
+									<li><a href="workshop.html">Workshop</a></li>
+									<li><a href="gallery.php">Gallery</a></li>
+									<li><a href="contact.php">Contact us</a></li>
+									<li><a href="featured.php">Featured</a></li>
 								</ul>
 							</div><!-- /.footer-menu-->
 						</div><!--/.hm-footer-widget-->

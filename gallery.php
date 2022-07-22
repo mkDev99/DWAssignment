@@ -68,12 +68,12 @@
 					<ul class="pull-left">
 						<li>
 							<a href="#">
-								<i class="fa fa-phone" aria-hidden="true"></i> +992 563 542
+								<i class="fa fa-phone" aria-hidden="true"></i> +44 000 000 000
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<i class="fa fa-envelope" aria-hidden="true"></i>info@mail.com
+								<i class="fa fa-envelope" aria-hidden="true"></i>mail@hge.com
 							</a>
 						</li>
 					</ul>
@@ -144,21 +144,20 @@
 						</div><!--/.section-header-->
 						<div class="service-content-one">
                             <?php
-                                $query = "SELECT * FROM product WHERE ForSale = 'Yes' ORDER BY ProductID DESC";
+                                $query = "SELECT * FROM product WHERE ProductCondition = 'New' ORDER BY ProductID DESC";
                                 $ret = mysqli_query($connect, $query);
 
                                 $count = mysqli_num_rows($ret);
 
                                 if ($count == 0)
                                 {
-                                    echo "<p>No product found</p>";
-                                    exit();
+                                    echo "<p class='text-center'>No product found</p>";	
                                 }
                                 else
                                 {
                                     for($a = 0; $a < $count; $a+=3)
                                     {
-                                        $query1 = "SELECT * FROM product WHERE ForSale = 'Yes' ORDER BY ProductID LIMIT $a, 3";
+                                        $query1 = "SELECT * FROM product WHERE ProductCondition = 'New' ORDER BY ProductID LIMIT $a, 3";
                                         $ret1 = mysqli_query($connect, $query1);
 
                                         $count1 = mysqli_num_rows($ret1);
@@ -177,7 +176,6 @@
                                             $ProductImage2 = $data['ProductImage2'];
                                             $Description = $data['Description'];
                                             $ProductTypeID = $data['ProductTypeID'];
-                                            $ForSale = $data['ForSale'];
                                             $ProductCondition = $data['ProductCondition'];
                             ?>
                                 <div class="col-sm-4 col-xs-12">
@@ -210,6 +208,15 @@
 		</section><!--/.service-->
 		<!--service end-->
 
+		<div class="cookie-disclaimer">
+        	<div class="cookie-close accept-cookie"><i class="fa fa-times"></i></div>
+        	<div class="container">
+            	<p>This is a dummy information for cookie. By using our website, you agree to our <a href="#">Terms & Privacy Policy</a>. 
+            	<br>For further information, please contact us via our Contact Us form.</p>
+            	<button type="button" class="btn accept-cookie">Agree!</button>
+        	</div>
+    	</div>
+
         <!--hm-footer start-->
 	    <section class="hm-footer">
 		<div class="container">
@@ -241,13 +248,13 @@
 							</div><!--/.hm-foot-title-->
 							<div class="footer-menu ">	  
 								<ul class="">
-									<li><a href="index.html" >Home</a></li>
-									<li><a href="about.html">Information</a></li>
-									<li><a href="services.html">Wanted</a></li>
-									<li><a href="portfolio.html">Workshop</a></li>
-									<li><a href="blog.html">Gallery</a></li>
-									<li><a href="contact.html">Contact us</a></li>
-									<li><a href="contact.html">Featured</a></li> 
+									<li><a href="home.php" >Home</a></li>
+									<li><a href="information.php">Information</a></li>
+									<li><a href="wanted.php">Wanted</a></li>
+									<li><a href="workshop.html">Workshop</a></li>
+									<li><a href="gallery.php">Gallery</a></li>
+									<li><a href="contact.php">Contact us</a></li>
+									<li><a href="featured.php">Featured</a></li> 
 								</ul>
 							</div><!-- /.footer-menu-->
 						</div><!--/.hm-footer-widget-->

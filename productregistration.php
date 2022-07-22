@@ -10,7 +10,6 @@
         $description = $_POST['txtdescription'];
         $cboType = $_POST['cboType'];
         $optCondition = $_POST['optCondition'];
-        $optSale = $_POST['optSale'];
 
         $image1 = $_FILES['productimage1']['name'];
         $folder = "images/";
@@ -45,15 +44,15 @@
         }
         else
         {
-            $insert = "INSERT INTO product(ProductName, Price, Year, Quantity, ProductImage1, ProductImage2, Description, ProductTypeID, ForSale, ProductCondition)
-            values('$productname', '$price', '$year', '$quantity', '$filename1', '$filename2', '$description', '$cboType', '$optSale', '$optCondition')";
+            $insert = "INSERT INTO product(ProductName, Price, Year, Quantity, ProductImage1, ProductImage2, Description, ProductTypeID, ProductCondition)
+            values('$productname', '$price', '$year', '$quantity', '$filename1', '$filename2', '$description', '$cboType', '$optCondition')";
 
             $query = mysqli_query($connect, $insert);
 
             if ($query)
             {
                 echo "<script>alert('Product Registration Successful')</script>";
-                echo "<script>window.location='productregistration.php'</script>";
+                echo "<script>window.location='gallery.php'</script>";
             }
             else
             {
@@ -119,7 +118,7 @@
                 <tr>
                     <td>Product Type</td>
                     <td>
-                        <select name="cboType">
+                        <select name="cboType" required>
                             <option value="">Choose Product Type</option>
                             <?php
                                 $query = "SELECT * FROM producttype";
@@ -149,14 +148,6 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>For Sale</td>
-                    <td>
-                        <select name="optSale">
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                        </select>
-                    </td>
-                </tr>
                 <tr>
                     <td></td>
                     <td>

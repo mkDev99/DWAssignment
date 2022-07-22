@@ -287,13 +287,13 @@
 							</div><!--/.hm-foot-title-->
 							<div class="footer-menu ">	  
 								<ul class="">
-									<li><a href="index.html" >Home</a></li>
-									<li><a href="about.html">Information</a></li>
-									<li><a href="services.html">Wanted</a></li>
-									<li><a href="portfolio.html">Workshop</a></li>
-									<li><a href="blog.html">Gallery</a></li>
-									<li><a href="contact.html">Contact us</a></li>
-									<li><a href="contact.html">Featured</a></li> 
+                                <li><a href="home.php" >Home</a></li>
+									<li><a href="information.php">Information</a></li>
+									<li><a href="wanted.php">Wanted</a></li>
+									<li><a href="workshop.html">Workshop</a></li>
+									<li><a href="gallery.php">Gallery</a></li>
+									<li><a href="contact.php">Contact us</a></li>
+									<li><a href="featured.php">Featured</a></li> 
 								</ul>
 							</div><!-- /.footer-menu-->
 						</div><!--/.hm-footer-widget-->

@@ -33,7 +33,7 @@
     $create = "CREATE TABLE product
     (
         ProductID int not null primary key AUTO_INCREMENT,
-        ProductName varchar(30),
+        ProductName varchar(100),
         Price varchar(30),
         Year varchar(30),
         Quantity int,
@@ -42,7 +42,6 @@
         Description varchar(100),
         ProductTypeID int,
         FOREIGN KEY (ProductTypeID) references producttype(ProductTypeID),
-        ForSale varchar(10),
         ProductCondition varchar(30)
     )";
 

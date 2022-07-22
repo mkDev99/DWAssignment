@@ -1,6 +1,7 @@
 <?php
     session_start();
     include('connect.php');
+    
     if(isset($_POST['btnlogin']))
     {
         $email = $_POST['txtemail'];
@@ -11,7 +12,7 @@
         $count = mysqli_num_rows($query);
 
         if($count > 0)
-        {
+        {   
             $update = "UPDATE customer set ViewCount = ViewCount + 1
                         WHERE EmailAddress = '$email' and Password = '$password'";
              mysqli_query($connect, $update);
@@ -20,8 +21,7 @@
             $_SESSION['CustomerID'] = $customerid;
             
             echo "<script>window.alert('Logined Successfully')</script>";
-             $_SESSION['current_page'] = $_SERVER['REQUEST_URI'];
-             header("Location: ". $_SESSION['current_page']);
+            header('Location: ' . $_SESSION['current_page']);
         }
         else
         {
@@ -140,8 +140,8 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="information.html">Information</a></li>
-                            <li><a href="wanted1.php">Wanted</a></li>
+                            <li><a href="information.php">Information</a></li>
+                            <li><a href="wanted.php">Wanted</a></li>
                             <li><a href="workshop.html">Workshop</a></li>
                             <li><a href="gallery.php">Gallery</a></li>
                             <li><a href="contact.php">Contact</a></li>
