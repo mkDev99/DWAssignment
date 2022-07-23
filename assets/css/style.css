@@ -702,7 +702,10 @@ html,body{
 .service-content-one{
 	margin-top: 42px;
 	margin-bottom: 60px;
-	
+}
+
+.service-details {
+	margin-top: 30px;
 }
 
 .service-img img{
