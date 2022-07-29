@@ -39,6 +39,7 @@
         Quantity int,
         ProductImage1 text,
         ProductImage2 text,
+        ProductImage3 text,
         Description varchar(100),
         ProductTypeID int,
         FOREIGN KEY (ProductTypeID) references producttype(ProductTypeID),

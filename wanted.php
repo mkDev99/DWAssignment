@@ -152,34 +152,6 @@
 								<li><a href="gallery.php">Gallery</a></li>
 								<li><a href="contact.php">Contact</a></li>
 								<li><a href="featured.php">Featured</a></li>
-								<li class="search">
-									<form action="wanted1.php" method="POST">
-										<input type="text" name="txtsearch" placeholder="Search....">
-										<a href="#" name="btnSearch">
-											<span class="lnr lnr-magnifier"></span>
-										</a>
-									</form>
-									<?php
-										if (isset($_POST['btnSearch']))
-										{
-											$second = "SELECT * FROM product WHERE ProductCondition = 'Used'
-														AND ProductName LIKE '%$second%'";
-											$result = mysqli_query($connect, $query);
-											$count = mysqli_num_rows($result);
-
-											if($count > 0)
-											{
-												for ($i = 0; $i < $count; $i+=5)
-												{
-													$query1 = "SELECT * FROM product WHERE ProductCondition = 'Used'
-																AND ProductName LIKE '%$second%' LIMIT $i,5";
-													$result1 = mysqli_query($connect, $query1);
-													$count1 = mysqli_num_rows($result1);
-												}
-											}
-										}
-									?>
-								</li>
 							</ul><!-- / ul -->
 						</div><!-- /.navbar-collapse -->
 					</nav><!--/nav -->
@@ -194,7 +166,28 @@
 					<div class="section-header text-center">
 						<h2>second hand products</h2>
 						<p>
-							Shop second hand products with our limited warranty
+							Search second hand products with our limited warranty
+							<form action="wanted.php" method="POST">
+								<input type="text" name="txtSearch" placeholder="Search Here...">
+								<button name="btnSearch">Search</button>
+							</form>
+							<?php
+								if(isset($_POST['btnSearch']))
+								{
+									$second = $_POST['txtSearch'];
+									$query = "SELECT * FROM product WHERE ProductCondition = 'Used'
+												AND  ProductName LIKE '%$second%'";
+									$result = mysqli_query($connect, $query);
+									$count = mysqli_num_rows($result);
+								if ($count > 0)
+								{
+									for ($i = 0; $i < $count; $i += 5)
+									{
+										$query1 = "SELECT * FROM product WHERE ProductCondition = 'Used'
+													AND ProductName LIKE '%$second%' LIMIT $i,3";
+										$result1 = mysqli_query($connet, $query1);
+										$count1 = mysqli_num_rows($result1);
+							?>
 						</p>
 					</div><!--/.section-header-->
 					<div class="service-content-one">

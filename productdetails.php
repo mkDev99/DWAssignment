@@ -1,5 +1,42 @@
 <?php
+    session_start();
     include('connect.php');
+    include('ShoppingCartFunctions.php');
+
+    if(isset($_GET['Buy']))
+    {
+        $txtProductID = $_GET['txtProductID'];
+        $txtBuyQty = $_GET['txtBuyQty'];
+        AddShoppingCart($txtProductID, $txtBuyQty);
+    }
+
+    if(isset($_GET['ProductID']))
+    {
+        $ProductID = $_GET['ProductID'];
+
+        $query = "SELECT p.*, pt.ProductTypeID, pt.ProductTypeName
+        FROM product p, producttype pt 
+        WHERE p.ProductID = '$ProductID' 
+        AND p.ProductTypeID = pt.ProductTypeID";
+
+        $result = mysqli_query($connect, $query);
+
+        $row = mysqli_fetch_array($result);
+        $ProductName = $row['ProductName'];
+        $Price = $row['Price'];
+        $Year = $row['Year'];
+        $Quantity = $row['Quantity'];
+        $ProductType = $row['ProductTypeID'];
+        $ProductImage1 = $row['ProductImage1'];
+        $ProductImage2 = $row['ProductImage2'];
+        $ProductImage3 = $row['ProductImage3'];
+        $Description = $row['Description'];
+        $ProductCondition = $row['ProductCondition'];
+    }
+    else
+    {
+        echo "<script>Product Not Found </script>";
+    }
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -21,7 +58,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 		
         <!-- TITLE OF SITE -->
-        <title>Gallery | HGE</title>
+        <title>Product Detail | HGE</title>
 
         <!-- for title img -->
 		<link rel="shortcut icon" type="image/icon" href="assets/images/logo/favicon.png"/>
@@ -93,7 +130,6 @@
 					</ul>
 				</div>
 			</div>
-
 		</section>
 
         <section id="menu">
@@ -124,7 +160,6 @@
 								<li class="active"><a href="gallery.php">Gallery</a></li>
 								<li><a href="contact.php">Contact</a></li>
 								<li><a href="featured.php">Featured</a></li>
-                                <li><a href="rssfeed.php"><img src="assets/images/gallery/rssfeed.svg" alt=""></a></li>
 							</ul><!-- / ul -->
 						</div><!-- /.navbar-collapse -->
 					</nav><!--/nav -->
@@ -132,83 +167,56 @@
 			</div><!-- /.container -->
 		</section><!--/#menu-->
 		<!--menu end-->
+        </footer><!-- /.footer-copyright-->
+		<!-- footer-copyright end -->
 
-        <section class="service">
+        <section  class="service">
 				<div class="container">
 					<div class="service-details">
 						<div class="section-header text-center">
-							<h2>Gallery</h2>
+							<h2><?php echo $ProductName ?></h2>
 							<p>
-								Check out the products that are currently for sale
+								<?php echo $Description ?>
 							</p>
 						</div><!--/.section-header-->
 						<div class="service-content-one">
-                            <?php
-                                $query = "SELECT * FROM product WHERE ProductCondition = 'New' ORDER BY ProductID DESC";
-                                $ret = mysqli_query($connect, $query);
-
-                                $count = mysqli_num_rows($ret);
-
-                                if ($count == 0)
-                                {
-                                    echo "<p class='text-center'>No product found</p>";	
-                                }
-                                else
-                                {
-                                    for($a = 0; $a < $count; $a+=3)
-                                    {
-                                        $query1 = "SELECT * FROM product WHERE ProductCondition = 'New' ORDER BY ProductID LIMIT $a, 3";
-                                        $ret1 = mysqli_query($connect, $query1);
-
-                                        $count1 = mysqli_num_rows($ret1);
-
-                                        echo '<div class="row">';
-
-                                        for($i = 0; $i < $count1; $i++)
-                                        {
-                                            $data = mysqli_fetch_array($ret1);
-                                            $ProductID = $data['ProductID'];
-                                            $ProductName = $data['ProductName'];
-                                            $Price = $data['Price'];
-                                            $Year = $data['Year'];
-                                            $Quantity = $data['Quantity'];
-                                            $ProductImage1 = $data['ProductImage1'];
-                                            $ProductImage2 = $data['ProductImage2'];
-                                            $Description = $data['Description'];
-                                            $ProductTypeID = $data['ProductTypeID'];
-                                            $ProductCondition = $data['ProductCondition'];
-                            ?>
-                                <div class="col-sm-4 col-xs-12">
-                                    <div class="service-single text-center">
-                                        <div class="service-img">
-                                            <img src="<?php echo $ProductImage1 ?>" alt="image of product"/>
-                                        </div><!--/.service-img-->
-                                        <div class="service-txt">
-                                            <h2>
-                                                <a href=""><?php echo $ProductName ?></a>
-                                                <p>Condition : <?php echo $ProductCondition ?></p>
-                                            </h2>
-                                            <p>
-                                                <?php echo "<p>$ $Price"; ?>
-                                            </p>
-                                            
-                                            <a href="productdetails.php?ProductID=<?php echo $ProductID?>">See more</a>
-                                        </div><!--/.service-txt-->
-                                    </div><!--/.service-single-->
-                                </div><!--/.col-->
-                            <?php
-                                        }
-                                        echo "</div>";
-                                    }
-                                }
-                            ?>
-                        </div><!--/.service-content-one-->
+							<div class="row">
+								<div class="col-sm-4 col-xs-12">
+									<div class="service-single text-center">
+										<div class="blog-img">
+											<img src="<?php echo $ProductImage1 ?>" alt="image of product" />
+										</div><!--/.service-img-->
+									</div><!--/.service-single-->
+								</div><!--/.col-->
+								<div class="col-sm-4 col-xs-12">
+									<div class="service-single text-center">
+										<div class="blog-img">
+											<img src="<?php echo $ProductImage2 ?>" alt="image of product" />
+										</div><!--/.service-img-->
+									</div>
+								</div>
+								<div class="col-sm-4 col-xs-12">
+									<div class="service-single text-center">
+										<div class="service-img">
+											<img src="<?php echo $ProductImage3 ?>" alt="image of product" />
+										</div>
+									</div><!--/.service-single-->
+								</div><!--/.col-->
+							</div><!--/.row-->
+						</div><!--/.service-content-one-->
+                        <div class="section-header text-center">
+                            <h2>Product Details</h2>
+							<p>Price              : £<?php echo $Price ?></p>
+                            <p>Manufacturing Date : <?php echo $Year ?></p>
+                            <p>Product Condition  : <?php echo $ProductCondition ?></p>
+                            <p>Stock : <?php echo $Quantity ?></p>
+						</div><!--/.section-header-->
 					</div><!--/.service-details-->
 				</div><!--/.container-->
 		</section><!--/.service-->
 		<!--service end-->
 
-		<div class="cookie-disclaimer">
+        <div class="cookie-disclaimer">
         	<div class="cookie-close accept-cookie"><i class="fa fa-times"></i></div>
         	<div class="container">
             	<p>This is a dummy information for cookie. By using our website, you agree to our <a href="#">Terms & Privacy Policy</a>. 
@@ -266,9 +274,13 @@
 							</div><!--/.hm-foot-title-->
 							<div class="hm-para-news">
 								<a href="">
-									You are at the Gallery page.
+									You are at a product detail page.
 								</a>
 							</div><!--/.hm-para-news-->
+							<div class="footer-line">
+								<div class="border-bottom"></div>
+							</div>
+							
 						</div><!--/.hm-footer-widget-->
 					</div><!--/.col-->
 					<div class=" col-md-3 col-sm-6  col-xs-12">

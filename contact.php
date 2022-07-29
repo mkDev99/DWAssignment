@@ -128,26 +128,13 @@
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li ><a href="index.html">Home</a></li>
-                            <li ><a href="about.html">About</a></li>
-                            <li><a href="service.html">Service</a></li>
-                            <li><a href="project.html">Project</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li class="active"><a href="contact.html">Contact</a></li>
-                            <li>
-                                <a href="#">
-                                    <span class="lnr lnr-cart"></span>
-                                </a>
-                            </li>
-                            <li class="search">
-                                <form action="">
-                                    <input type="text" name="search" placeholder="Search....">
-                                    <a href="#">
-                                        <span class="lnr lnr-magnifier"></span>
-                                    </a>
-                                </form>
-                            </li>
+                        <li ><a href="index.html">Home</a></li>
+								<li><a href="information.php">Information</a></li>
+								<li><a href="wanted.php">Wanted</a></li>
+								<li><a href="workshop.html">Workshop</a></li>
+								<li><a href="gallery.php">Gallery</a></li>
+								<li class="active"><a href="contact.php">Contact</a></li>
+								<li><a href="featured.php">Featured</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -286,7 +273,7 @@
 								</div><!--/.hm-foot-title-->
 								<div class="hm-foot-para">
 									<p>
-										Lorem ipsum dolor sit amt conetur adcing elit. Sed do eiusod tempor utslr. Ut laboris nisi ut aute irure dolor in rein velit esse.
+										
 									</p>
 								</div><!--/.hm-foot-para-->
 								<div class="hm-foot-icon">
@@ -306,35 +293,23 @@
 								</div><!--/.hm-foot-title-->
 								<div class="footer-menu ">	  
 									<ul class="">
-										<li><a href="index.html" >Home</a></li>
-										<li><a href="about.html">About</a></li>
-										<li><a href="services.html">Service</a></li>
-										<li><a href="portfolio.html">Portfolio</a></li>
-										<li><a href="blog.html">Blog</a></li>
-										<li><a href="contact.php">Contact us</a></li> 
+                                        <li><a href="home.php" >Home</a></li>
+                                        <li><a href="information.php">Information</a></li>
+                                        <li><a href="wanted.php">Wanted</a></li>
+                                        <li><a href="workshop.html">Workshop</a></li>
+                                        <li><a href="gallery.php">Gallery</a></li>
+                                        <li><a href="contact.php">Contact us</a></li>
+                                        <li><a href="featured.php">Featured</a></li>
 									</ul>
 								</div><!-- /.footer-menu-->
 							</div><!--/.hm-footer-widget-->
 						</div><!--/.col-->
 						<div class=" col-md-3 col-sm-6 col-xs-12">
 							<div class="hm-footer-widget">
-								<div class="hm-foot-title">
-									<h4>from the news</h4>
-								</div><!--/.hm-foot-title-->
 								<div class="hm-para-news">
 									<a href="blog_single.html">
-										The Pros and Cons of Starting an Online Business.
+										You are at the Contact page.
 									</a>
-									<span>12th June 2017</span>
-								</div><!--/.hm-para-news-->
-								<div class="footer-line">
-									<div class="border-bottom"></div>
-								</div>
-								<div class="hm-para-news">
-									<a href="blog_single.html">
-										The Pros and Cons of Starting an Online Business.
-									</a>
-									<span>12th June 2017</span>
 								</div><!--/.hm-para-news-->
 							</div><!--/.hm-footer-widget-->
 						</div><!--/.col-->
@@ -372,14 +347,12 @@
 					<div class="col-sm-7">
 						<div class="foot-copyright pull-left">
 							<p>
-								&copy; All Rights Reserve
-							 	<a href="https://www.themesine.com">ThemeSINE</a>
+								&copy; All Rights Reserved @ HGE
 							</p>
 						</div><!--/.foot-copyright-->
 					</div><!--/.col-->
 					<div class="col-sm-5">
-						<div class="foot-menu pull-right
-						">	  
+						<div class="foot-menu pull-right">	  
 							<ul>
 								<li ><a href="#">legal</a></li>
 								<li ><a href="#">sitemap</a></li>

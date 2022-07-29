@@ -33,6 +33,17 @@
             exit();
         }
 
+        $image3 = $_FILES['productimage3']['name'];
+        $folder = "images/";
+        $filename3 = $folder.'_'.$image3;
+        $copy = copy($_FILES['productimage3']['tmp_name'], $filename3);
+
+        if(!$copy)
+        {
+            echo "<p>Cannot Upload Product Image</p>";
+            exit();
+        }
+
         $select = "SELECT * FROM product where ProductName = '$productname'";
         $query = mysqli_query($connect, $select);
         $count = mysqli_num_rows($query);
@@ -44,8 +55,8 @@
         }
         else
         {
-            $insert = "INSERT INTO product(ProductName, Price, Year, Quantity, ProductImage1, ProductImage2, Description, ProductTypeID, ProductCondition)
-            values('$productname', '$price', '$year', '$quantity', '$filename1', '$filename2', '$description', '$cboType', '$optCondition')";
+            $insert = "INSERT INTO product(ProductName, Price, Year, Quantity, ProductImage1, ProductImage2, ProductImage3, Description, ProductTypeID, ProductCondition)
+            values('$productname', '$price', '$year', '$quantity', '$filename1', '$filename2', '$filename3', '$description', '$cboType', '$optCondition')";
 
             $query = mysqli_query($connect, $insert);
 
@@ -107,6 +118,12 @@
                     <td>Product Image 2</td>
                     <td>
                         <input type="file" name="productimage2" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Product Image 3</td>
+                    <td>
+                        <input type="file" name="productimage3" required>
                     </td>
                 </tr>
                 <tr>
